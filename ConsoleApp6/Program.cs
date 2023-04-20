@@ -16,6 +16,7 @@ namespace ConsoleApp6
             //논리형
             bool bb;
             #endregion
+
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
@@ -78,7 +79,24 @@ namespace ConsoleApp6
             }
             #endregion
 
-
+            #region 반복문
+            //반복 횟수
+            int aaa = int.Parse(Console.ReadLine());
+            //for문
+            for (int i = 0; i < aaa; i++)//i가 입력값보다 작을 때 반복
+            {
+                Console.WriteLine("for문 반복");
+            }
+            Console.WriteLine("for문 끝");
+            //while문
+            int q = 0;
+            while(q <= aaa) //q가 입력값보다 작거나 같을 때 반복
+            {
+                Console.WriteLine("while문 반복");
+                q++;
+            }
+            Console.WriteLine("while문 끝");
+            #endregion
         }
     }
 }
