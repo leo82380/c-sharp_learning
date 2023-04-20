@@ -38,7 +38,7 @@ namespace ConsoleApp6
             #region 출력
             //+ 뒤의 input값들은 위에서 선언한 변수 이름
             //만약 다른 이름으로 선언했으면 그 이름으로 뒤에 붙이기
-
+            
             //string 출력하기
             Console.WriteLine("string : " + input); 
             //char 출력하기
@@ -51,14 +51,27 @@ namespace ConsoleApp6
             Console.WriteLine("double : " + doubleInput);
             #endregion
 
+            #region 변수 포함해 출력 방법
+            //1.
+            Console.WriteLine("플러스 기호 붙이기 : " + intInput);
+            //2.
+            Console.WriteLine($"달러 붙이기 : {intInput}");
+            //3.
+            Console.WriteLine("뒤에 변수 이름 쓰기 : {0}", intInput);
+            //변수만 출력
+            Console.WriteLine(intInput);
+            #endregion
+
             #region 형 변환
             //변수에 string값 넣기
             Console.WriteLine("숫자로 변환할 string값을 입력하세요");
             string inputString = Console.ReadLine();
             //string 값을 int 값으로 변환
             int stringToint = int.Parse(inputString);
+            Console.WriteLine("int값으로 변환 값 : " + stringToint);
             //string 값을 float 값으로 변환
             float stringTofloat = float.Parse(inputString);
+            Console.WriteLine("float값으로 변환 값 : " + stringTofloat);
             #endregion
 
             #region 예외처리
@@ -66,6 +79,7 @@ namespace ConsoleApp6
             try//try 안에 있는거 실행 해보기
             {
                 int a = int.Parse(Console.ReadLine());
+                Console.WriteLine(a);
             }
             catch(FormatException e)//다른 형식 들어왔을 때
             {
@@ -85,14 +99,14 @@ namespace ConsoleApp6
             //for문
             for (int i = 0; i < aaa; i++)//i가 입력값보다 작을 때 반복
             {
-                Console.WriteLine("for문 반복");
+                Console.WriteLine("for문 반복" + i);
             }
             Console.WriteLine("for문 끝");
             //while문
             int q = 0;
             while(q <= aaa) //q가 입력값보다 작거나 같을 때 반복
             {
-                Console.WriteLine("while문 반복");
+                Console.WriteLine("while문 반복" + q);
                 q++;
             }
             Console.WriteLine("while문 끝");
