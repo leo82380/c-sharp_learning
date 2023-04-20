@@ -6,6 +6,16 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            #region 변수들
+            //정수형
+            int ii;
+            //실수형
+            float ff;
+            //정수, 실수 둘 다 되는 형(소숫점 표시)
+            double dd;
+            //논리형
+            bool bb;
+            #endregion
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
@@ -67,6 +77,8 @@ namespace ConsoleApp6
                 Console.WriteLine("오버플로우 발생. int형에 맞는 값 입력");
             }
             #endregion
+
+
         }
     }
 }
