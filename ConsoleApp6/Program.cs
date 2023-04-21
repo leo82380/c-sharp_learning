@@ -16,12 +16,12 @@ namespace ConsoleApp6
             //논리형
             bool bb;
             #endregion
-#region 연산자
-int ii = 8 >> 2;//오른쪽 시프트
-Console.WriteLine(ii);
-int ii = ii << 2;//왼쪽 시프트
-Console.WriteLine(ii);
-#endregion
+            #region 시프트 연산자
+            ii = 8 >> 2;//오른쪽 시프트
+            Console.WriteLine(ii);
+            ii = ii << 2;//왼쪽 시프트
+            Console.WriteLine(ii);
+            #endregion
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
@@ -108,13 +108,22 @@ Console.WriteLine(ii);
             }
             Console.WriteLine("for문 끝");
             //while문
-            int q = 0;
+            int q = int.Parse(Console.ReadLine());
             while(q <= aaa) //q가 입력값보다 작거나 같을 때 반복
             {
                 Console.WriteLine("while문 반복" + q);
                 q++;
             }
             Console.WriteLine("while문 끝");
+            #endregion
+
+            #region do while문
+            int dowhile = int.Parse(Console.ReadLine());
+            do
+            {
+                Console.WriteLine("do");
+                dowhile++;
+            } while (dowhile <= 10);
             #endregion
         }
     }
