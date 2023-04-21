@@ -16,7 +16,12 @@ namespace ConsoleApp6
             //논리형
             bool bb;
             #endregion
-
+#region 연산자
+int ii = 8 >> 2;//오른쪽 시프트
+Console.WriteLine(ii);
+int ii = ii << 2;//왼쪽 시프트
+Console.WriteLine(ii);
+#endregion
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
