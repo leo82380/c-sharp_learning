@@ -17,11 +17,13 @@ namespace ConsoleApp6
             bool bb;
             #endregion
             #region 시프트 연산자
-            ii = 8 >> 2;//오른쪽 시프트
+            ii = int.Parse(Console.ReadLine());
+            ii = ii >> 2;//오른쪽 시프트
             Console.WriteLine(ii);
             ii = ii << 2;//왼쪽 시프트
             Console.WriteLine(ii);
             #endregion
+
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
@@ -104,14 +106,15 @@ namespace ConsoleApp6
             //for문
             for (int i = 0; i < aaa; i++)//i가 입력값보다 작을 때 반복
             {
-                Console.WriteLine("for문 반복" + i);
+                Console.WriteLine("for문 반복 : " + i);
             }
             Console.WriteLine("for문 끝");
             //while문
             int q = int.Parse(Console.ReadLine());
-            while(q <= aaa) //q가 입력값보다 작거나 같을 때 반복
+            int inp = int.Parse(Console.ReadLine());
+            while(q <= inp) //q가 inp보다 작거나 같을 때 반복
             {
-                Console.WriteLine("while문 반복" + q);
+                Console.WriteLine("while문 반복 : " + q);
                 q++;
             }
             Console.WriteLine("while문 끝");
@@ -124,6 +127,22 @@ namespace ConsoleApp6
                 Console.WriteLine("do");
                 dowhile++;
             } while (dowhile <= 10);
+            #endregion
+
+            #region switch case문
+            int switchCase = int.Parse(Console.ReadLine());
+            switch (switchCase)
+            {
+                case 1://1을 입력 받았을때
+                    Console.WriteLine("1");//1을 출력
+                    break;//switch case문은 break가 있어야한다
+                case 2:
+                    Console.WriteLine("2");
+                    break;
+                default://1, 2 말고 다른 값을 입력 받았을 때
+                    Console.WriteLine("나머지");//나머지 출력
+                    break;
+            }
             #endregion
         }
     }
