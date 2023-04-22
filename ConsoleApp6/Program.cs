@@ -16,6 +16,7 @@ namespace ConsoleApp6
             //논리형
             bool bb;
             #endregion
+
             #region 시프트 연산자
             ii = int.Parse(Console.ReadLine());
             ii = ii >> 2;//오른쪽 시프트
