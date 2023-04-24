@@ -148,6 +148,7 @@ namespace ConsoleApp6
             
             #region 띄어쓰기로 입력받기
             string[] in = Console.ReadLine().Split();
+            #endregion
         }
     }
 }
