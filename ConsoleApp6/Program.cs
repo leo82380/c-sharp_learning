@@ -147,7 +147,11 @@ namespace ConsoleApp6
             #endregion
             
             #region 띄어쓰기로 입력받기
-            string[] in = Console.ReadLine().Split();
+            string[] inpu = Console.ReadLine().Split();
+            for (int i = 0; i < inpu.Length; i++)
+            {
+                Console.WriteLine(inpu[i]);
+            }
             #endregion
         }
     }
