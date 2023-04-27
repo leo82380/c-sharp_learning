@@ -153,6 +153,17 @@ namespace ConsoleApp6
                 Console.WriteLine(inpu[i]);
             }
             #endregion
+
+            #region 삼항연산자
+            Console.WriteLine("비교할 첫번째 수를 입력하세요 :");
+            int inp1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("비교할 두번째 수를 입력하세요 :");
+            int inp2 = int.Parse(Console.ReadLine());
+            //inp1과 inp2를 비교
+            //inp1이 inp2보다 크면 inp1을 in3에 넣고 아니면 inp2를 in3에 넣는다.
+            string in3 = inp1 > inp2 ? "첫번째 값이 두번째 값보다 큽니다\n값 : " + inp1 : "첫번째 값이 두번째 값보다 작습니다\n값 : " + inp2;
+            Console.WriteLine(in3);//그리고 in3을 출력한다.
+            #endregion
         }
     }
 }
