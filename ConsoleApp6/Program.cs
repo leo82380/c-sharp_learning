@@ -139,6 +139,19 @@ namespace ConsoleApp6
             } while (asdf <= dowhile);
             #endregion
 
+            #region 무한반복
+            int fdsa = 30;
+            int dsa = 0;
+            while (true)
+            {
+                Console.Write(dsa);
+                dsa++;
+                if(dsa >= fdsa)
+                {
+                    break;
+                }
+            }
+            #endregion
             #endregion
 
             #region switch case문
