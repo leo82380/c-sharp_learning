@@ -72,7 +72,7 @@ namespace ConsoleApp6
 
             #region 형 변환
             //변수에 string값 넣기
-            Console.WriteLine("숫자로 변환할 string값을 입력하세요");
+            Console.WriteLine("string을 int형으로 변환할 값을 입력하세요");
             string inputString = Console.ReadLine();
             //string 값을 int 값으로 변환
             int stringToint = int.Parse(inputString);
@@ -86,6 +86,7 @@ namespace ConsoleApp6
             //예외처리는 try와 catch로 함
             try//try 안에 있는거 실행 해보기
             {
+                Console.WriteLine("정수를 입혁하세요");
                 int a = int.Parse(Console.ReadLine());
                 Console.WriteLine(a);
             }
@@ -97,23 +98,29 @@ namespace ConsoleApp6
             catch(OverflowException e)//오버플로우(값 초과 또는 미만)가 발생했을 때
             {
                 Console.WriteLine(e.Message);//에러 메세지 출력
-                Console.WriteLine("오버플로우 발생. int형에 맞는 값 입력");
+                Console.WriteLine("오버플로우 발생. int형 범위 안에 있는 값을 입력");
             }
             #endregion
 
             #region 반복문
+
+            #region for문
             //반복 횟수
+            Console.WriteLine("몇번 반복합니까?(for)");
             int aaa = int.Parse(Console.ReadLine());
-            //for문
+            
             for (int i = 0; i < aaa; i++)//i가 입력값보다 작을 때 반복
             {
                 Console.WriteLine("for문 반복 : " + i);
             }
             Console.WriteLine("for문 끝");
-            //while문
-            int q = int.Parse(Console.ReadLine());
+            #endregion
+
+            #region while문
+            int q = 0;
+            Console.WriteLine("몇번 반복합니까?(while)");
             int inp = int.Parse(Console.ReadLine());
-            while(q <= inp) //q가 inp보다 작거나 같을 때 반복
+            while(q <= inp) //q가 입력값보다 작거나 같을 때 반복
             {
                 Console.WriteLine("while문 반복 : " + q);
                 q++;
@@ -122,12 +129,16 @@ namespace ConsoleApp6
             #endregion
 
             #region do while문
+            Console.WriteLine("몇번 반복합니까?(do while)");
             int dowhile = int.Parse(Console.ReadLine());
-            do
+            int asdf = 0;
+            do//while문의 조건식이 참일 때 do안에 있는 걸 반복
             {
-                Console.WriteLine("do");
-                dowhile++;
-            } while (dowhile <= 10);
+                Console.WriteLine("do " + asdf);
+                asdf++;
+            } while (asdf <= dowhile);
+            #endregion
+
             #endregion
 
             #region switch case문
@@ -145,8 +156,9 @@ namespace ConsoleApp6
                     break;
             }
             #endregion
-            
-            #region 띄어쓰기로 입력받기
+
+            #region 띄어쓰기를 포함해 입력받기
+            Console.WriteLine("띄어쓰기를 포함해 입력받을 값을 입력하세요");
             string[] inpu = Console.ReadLine().Split();
             for (int i = 0; i < inpu.Length; i++)
             {
