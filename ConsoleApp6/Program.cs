@@ -39,6 +39,20 @@ namespace ConsoleApp6
             Console.WriteLine(aba4);
             #endregion
 
+            #region 논리 연산자
+            bool x = true;
+            bool y = false;
+            //&&(AND)연산자는 둘 다 true면 true를 반환
+            bool result1 = x && y;
+            //||(OR)연산자는 하나라도 true면 true를 반환
+            bool result2 = x || y;
+            //!(NOT)연산자는 값을 반대로 출력
+            bool result3 = !x;
+            Console.WriteLine(result1);// true && false = false
+            Console.WriteLine(result2);// true || false = true
+            Console.WriteLine(result3);// !true = false
+            #endregion
+
             #region 입력
             //string으로 입력받기
             Console.WriteLine("string 값을 입력하세요");
