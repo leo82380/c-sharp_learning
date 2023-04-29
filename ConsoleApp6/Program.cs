@@ -6,14 +6,14 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            #region 변수들
-            //정수형
+            #region 변수선언
+            //정수형(예: 1, 2, 3...)
             int ii;
-            //실수형
+            //실수형(예: 1.2, 4.5, 5.245...)
             float ff;
-            //정수, 실수 둘 다 되는 형(소숫점 표시)
+            //정수, 실수 둘 다 되는 형(소숫점 표시)(예: 1, 2, 3, 2.4, 5.32...)
             double dd;
-            //논리형
+            //논리형(예: true, false)
             bool bb;
             #endregion
 
@@ -23,6 +23,20 @@ namespace ConsoleApp6
             Console.WriteLine(ii);
             ii = ii << 2;//왼쪽 시프트
             Console.WriteLine(ii);
+            #endregion
+
+            #region 비트 연산자
+            Console.WriteLine("연산자를 이용해 바꿀 수 2개를 입력하세요");
+            int ab = int.Parse(Console.ReadLine());
+            int ba = int.Parse(Console.ReadLine());
+            int aba = ab & ba;
+            Console.WriteLine(aba);
+            int aba2 = ab | ba;
+            Console.WriteLine(aba2);
+            int aba3 = ab ^ ba;
+            Console.WriteLine(aba3);
+            int aba4 = ~ab;
+            Console.WriteLine(aba4);
             #endregion
 
             #region 입력
@@ -152,6 +166,7 @@ namespace ConsoleApp6
                 }
             }
             #endregion
+
             #endregion
 
             #region switch case문
