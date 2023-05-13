@@ -184,6 +184,7 @@ namespace ConsoleApp6
             #endregion
 
             #region switch case문
+            Console.WriteLine("int 입력");
             int switchCase = int.Parse(Console.ReadLine());
             switch (switchCase)
             {
