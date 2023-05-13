@@ -218,6 +218,15 @@ namespace ConsoleApp6
             string in3 = inp1 > inp2 ? "첫번째 값이 두번째 값보다 큽니다\n값 : " + inp1 : "첫번째 값이 두번째 값보다 작습니다\n값 : " + inp2;
             Console.WriteLine(in3);//그리고 in3을 출력한다.
             #endregion
+
+            #region 랜덤
+            //랜덤 선언
+            Random rd = new Random();
+            //랜덤 범위 설정
+            int rda = rd.Next(1, 10);
+            //랜덤 수 출력
+            Console.WriteLine(rda);
+            #endregion
         }
     }
 }
