@@ -6,6 +6,7 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
+            //기본
             #region 변수선언
             //정수형(예: 1, 2, 3...)
             int ii;
