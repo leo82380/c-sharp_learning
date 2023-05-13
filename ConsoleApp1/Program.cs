@@ -18,35 +18,57 @@ namespace ConsoleApp1
             #endregion
 
             #region 입력한 수까지 짝수 또는 홀수만 출력하기
+            try { 
             Console.WriteLine("짝수 출력 1번 홀수 출력 2번");
             int input = int.Parse(Console.ReadLine());
-            switch (input)
-            {
-                case 1:
-                    Console.WriteLine("짝수만 출력합니다.");
-                    Console.WriteLine("최대값을 입력하세요.");
-                    int inp = int.Parse(Console.ReadLine());
-                    for (int i = 1; i <= inp; i++)
-                    {
-                        if(i % 2 == 0)
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("짝수만 출력합니다.");
+                        Console.WriteLine("최대값을 입력하세요.");
+                        int inp = int.Parse(Console.ReadLine());
+                        for (int i = 1; i <= inp; i++)
                         {
-                            Console.WriteLine(i);
+                            if (i % 2 == 0)
+                            {
+                                Console.WriteLine(i);
+                            }
                         }
-                    }
-                    break;
+                        break;
 
-                case 2:
-                    Console.WriteLine("홀수만 출력합니다.");
-                    Console.WriteLine("최대값을 입력하세요");
-                    int inp2 = int.Parse(Console.ReadLine());
-                    for (int i = 0; i <= inp2; i++)
-                    {
-                        if(i % 2 != 0)
+                    case 2:
+                        Console.WriteLine("홀수만 출력합니다.");
+                        Console.WriteLine("최대값을 입력하세요");
+                        int inp2 = int.Parse(Console.ReadLine());
+                        for (int i = 0; i <= inp2; i++)
                         {
-                            Console.WriteLine(i);
+                            if (i % 2 != 0)
+                            {
+                                Console.WriteLine(i);
+                            }
                         }
-                    }
-                    break;
+                        break;
+                }
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(OverflowException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            #endregion
+
+            #region 입력한 것 출력하기
+            try
+            {
+                string stinput = Console.ReadLine();
+                Console.WriteLine(stinput);
+            }
+            catch(FormatException e)
+            {
+                Console.WriteLine(e.Message);
             }
             #endregion
 
